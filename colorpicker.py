@@ -11,6 +11,30 @@ root.geometry("800x470+100+100")
 root.configure(bg="#e4e8eb")
 root.resizable(False,False)
 
+def showimage():
+    global filename
+    filename=filedialog.askopenfilename(initialdir=os.getcwd(), title= "Select Image File", filetype=(("PNG file","*.png"), ("JPG file","*.jpg"), ("ALL file","*.txt")))
+    img = Image.open(filename)
+    img= ImageTk.PhotoImage(img)
+    lbl.configure(image=img, width=310, height=270)
+    lbl.image =img 
+
+def Findcolor():
+    ct=ColorThief(filename)
+    palette = ct.get_palette(color_count=11)
+
+    rgb1=palette[0]
+    rgb2=palette[1]
+    rgb3=palette[2]
+    rgb4=palette[3]
+    rgb5=palette[4]
+    rgb6=palette[5]
+    rgb7=palette[6]
+    rgb8=palette[7]
+    rgb9=palette[8]
+    rgb10=palette[9]
+
+    
 #icon
 imageIcon = PhotoImage(file="icon.png")
 root.iconphoto(False, imageIcon)
