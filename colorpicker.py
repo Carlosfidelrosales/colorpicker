@@ -76,4 +76,18 @@ hex9.place(x=60,y=165)
 hex10=Label(colors2, text="#000000", fg="#000",font="helvetica 12 bold", bg="white")
 hex10.place(x=60,y=215)
 
+
+#select image
+selectimage=Frame(frame, width=340, height=350, bg="#d6dee5")
+selectimage.place(x=350,y=10)
+
+f=Frame(selectimage, bd=3, bg="lightblue", width=320, height=280,relief=GROOVE)
+f.place(x=10, y=10)
+
+lbl=Label(f,bg="lightblue")
+lbl.place(x=0, y=0)
+
+Button(selectimage, text="Select Image", width=12, height=1, font="helvetica 14 bold", command=showimage).place(x=10,y=300)
+Button(selectimage, text="Find Colors",width=12,height=1,font="helvetica 14 bold", command =Findcolor).place(x=176, y =300)
+
 root.mainloop()
