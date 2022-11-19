@@ -34,7 +34,43 @@ def Findcolor():
     rgb9=palette[8]
     rgb10=palette[9]
 
+    color1=f"#{rgb1[0]:02x}{rgb1[1]:02x}{rgb1[2]:02x}"
+    color2=f"#{rgb2[0]:02x}{rgb2[1]:02x}{rgb2[2]:02x}"
+    color3=f"#{rgb3[0]:02x}{rgb3[1]:02x}{rgb3[2]:02x}"
+    color4=f"#{rgb4[0]:02x}{rgb4[1]:02x}{rgb4[2]:02x}"
+    color5=f"#{rgb5[0]:02x}{rgb5[1]:02x}{rgb5[2]:02x}"
+    color6=f"#{rgb6[0]:02x}{rgb6[1]:02x}{rgb6[2]:02x}"
+    color7=f"#{rgb7[0]:02x}{rgb7[1]:02x}{rgb7[2]:02x}"
+    color8=f"#{rgb8[0]:02x}{rgb8[1]:02x}{rgb8[2]:02x}"
+    color9=f"#{rgb9[0]:02x}{rgb9[1]:02x}{rgb9[2]:02x}"
+    color10=f"#{rgb10[0]:02x}{rgb10[1]:02x}{rgb10[2]:02x}"
     
+    #replaces the default color after finding color on image
+    colors.itemconfig(id1, fill=color1)
+    colors.itemconfig(id2, fill=color2)
+    colors.itemconfig(id3, fill=color3)
+    colors.itemconfig(id4, fill=color4)
+    colors.itemconfig(id5, fill=color5)
+    colors2.itemconfig(id6, fill=color6)
+    colors2.itemconfig(id7, fill=color7)
+    colors2.itemconfig(id8, fill=color8)
+    colors2.itemconfig(id9, fill=color9)
+    colors2.itemconfig(id10, fill=color10)
+
+
+    #add text together with the color shown
+    hex1.config(text=color1)
+    hex2.config(text=color2)
+    hex3.config(text=color3)
+    hex4.config(text=color4)
+    hex5.config(text=color5)  
+    hex6.config(text=color6)
+    hex7.config(text=color7)
+    hex8.config(text=color8)
+    hex9.config(text=color9)
+    hex10.config(text=color10)
+
+
 #icon
 imageIcon = PhotoImage(file="icon.png")
 root.iconphoto(False, imageIcon)
